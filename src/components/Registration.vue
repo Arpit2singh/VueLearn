@@ -2,7 +2,7 @@
 <template>
 
 <div id="Registration">
-    <div style="background-color: green;" id="RegistrationBox" >
+    <div id="RegistrationBox" >
      <div id="box1">
        
         <form @submit.prevent="FormSubmit" > 
@@ -57,12 +57,12 @@
         <table id="Table" >
             <thead>
                 <tr>
-                    <th>Name</th>
-                    <th>Email</th>
-                    <th>Reg</th>
-                    <th>Phone</th>
-                    <th>Gender</th>
-                    <th>Message</th>
+                    <th class="entry"  >Name</th>
+                    <th class="entry">Email</th>
+                    <th class="entry" >Reg</th>
+                    <th class="entry" >Phone</th>
+                    <th class="entry" >Gender</th>
+                    <th class="entry">Message</th>
                 </tr>
             </thead>
             <tbody id="TableEntry">
@@ -134,6 +134,12 @@
 
 <style scoped>
 
+.entry{
+    padding: 10px;
+    border: 1px solid gray;
+    text-align: center;
+    color: white;
+}
 #SubmitButton{
     margin-top: 1rem;
     padding: 0.5rem 1rem;
@@ -159,6 +165,7 @@
 
 }
 
+
 #RegistrationBox{
     width: 100%;
     height: 100%;
@@ -179,12 +186,13 @@
     width: 45%;
     height: 80%;
     padding: 2rem;
-    background-color: #f0f0f0;
-    color:black; 
+  
+  
     display: flex ;
     justify-content: start;
     align-items: center;
 }
+
 #Fields{
     padding: 0.5rem;
     font-size: 1.2rem;
@@ -213,6 +221,7 @@
     justify-content: center;
     align-items: center;
 }
+
 
 #Table,#TableEntry{
     margin-top: 10px;
