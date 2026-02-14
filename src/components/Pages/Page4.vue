@@ -112,7 +112,7 @@ td {
     transition: 2s;
 }
 td::after{
-cdeolor:beige ;
+cdeolofvfvr:beige ;
 ff
 font-size:d 1rem;
 } */
