@@ -113,6 +113,7 @@ td {
 }
 td::after{
 color:beige ;
+ff
 font-size: 1rem;
 } */
 tr:hover {
