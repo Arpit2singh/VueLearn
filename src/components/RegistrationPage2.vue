@@ -20,7 +20,7 @@
             </thead>
             
             <tbody>
-                <tr @dblclick="EditEntry(index)"  v-for="(item, index) in DataEntry" :key="index">
+                <tr @dblclick="EditEntry(index)" @click="EventBusHandler($event , index)" v-for="(item, index) in DataEntry" :key="index">
                    <td>{{ item.name}}</td>
                     <td>{{  item.email}}</td>
                      <td>{{ item.reg }}</td>
@@ -39,6 +39,11 @@
 </template>
 
 <script setup>
+import { EventBus } from '@/EventBus';
+import { ref } from 'vue';
+import { useRouter } from 'vue-router';
+const router = useRouter() ;
+const count = ref(0) ; 
 
 const props = defineProps({
     DataEntry : Array , 
@@ -49,6 +54,19 @@ const EditEntry = (index)=>{
   const value = props.DataEntry[index] ; 
   const data  = {index : index , Val : value }  ; 
   props.gettingData(data)
+}
+
+function EventBusGo(idx){
+            router.push('/page4')
+            setTimeout(() => {
+                 EventBus.emit("event_bus_emitted" , props.DataEntry[idx])
+            }, 1000);
+        }
+const EventBusHandler = (event , idx) =>{
+    if(event.detail == 3){
+        console.log("tripple click detected event bus activated");
+        EventBusGo(idx) ; 
+    }
 }
 
 

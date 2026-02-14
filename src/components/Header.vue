@@ -27,7 +27,7 @@
 /* #Header{
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
+    
     background-color: #252424aa;
     display: flex;
     justify-content: space-between;

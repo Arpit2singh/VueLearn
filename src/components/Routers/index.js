@@ -7,6 +7,7 @@ import Registration from "../Registration.vue";
 import Page2 from "../Pages/Page2.vue";
 import Page3 from "../Pages/Page3.vue";
 import Layout from "../Layout.vue";
+import Page4 from "../Pages/Page4.vue";
 
 const Routes = [
     {
@@ -24,6 +25,10 @@ const Routes = [
             {
                 path: "page3",
                 component: Page3
+            },
+            {
+                path: "page4",
+                component: Page4
             }
         ]
     }
