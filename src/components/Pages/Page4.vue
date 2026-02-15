@@ -114,7 +114,7 @@ td {
 td::after{
 cdeolofvfvr:beige ;
 ff
-font-size:d 1rem;
+font-size:d 1\rem;
 } */
 tr:hover {
     color: orchid;
